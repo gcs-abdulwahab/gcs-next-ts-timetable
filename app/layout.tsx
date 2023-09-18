@@ -5,6 +5,7 @@ import './globals.css';
 
 import '@radix-ui/themes/styles.css';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       
       <body className={inter.className}>
 
+        <Header />
           
         {children}
       

@@ -1,40 +1,45 @@
+import './Hero.css'
 
 const Hero = () => {
+
+    // import Hero.css
+
 
     const heading = "Smart TimeTable"
     const description = "Get Rid of TimeTable Conflicts | Generate Timetable Reports"
 
     return (
-        <div className="hero  bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">{heading}</h1>
-                    <p className="py-6">{description}</p>
+      
+
+        <section className="background-radial-gradient  h-full">
+    
+          <div className="px-6 py-12 text-center md:px-12 lg:text-left">
+            <div className="container mx-auto">
+              <div className="grid items-center gap-12 lg:grid-cols-2">
+                <div className="mt-12 lg:mt-0">
+                  <h1 className="mb-12 text-5xl font-bold tracking-tight text-[hsl(218,81%,95%)] md:text-6xl xl:text-7xl">
+                    Smart TimeTable<br /><span className="text-[hsl(218,81%,75%)]">Clash Free and with Workload Reports</span>
+                  </h1>
+                  <p className="text-lg text-[hsl(218,81%,95%)]">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima officia consequatur adipisci tenetur repudiandae rerum
+                    quos.
+                  </p>
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div className="card-body">
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="text" placeholder="email" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input type="text" placeholder="password" className="input input-bordered" />
-                            <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label>
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
-                        </div>
-                    </div>
+                <div className="mb-12 lg:mb-0">
+                  <div id="dsa" className="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-lg shadow-lg"
+                    >
+                    <iframe className="embed-responsive-item absolute top-0 right-0 bottom-0 left-0 h-full w-full"
+                      src="https://www.youtube.com/embed/vlDzYIIOYmM?enablejsapi=1&amp;origin=https%3A%2F%2Fmdbootstrap.com"
+                      data-gtm-yt-inspected-2340190_699="true" id="240632615"></iframe>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </section>
+
+
     )
 }
 
