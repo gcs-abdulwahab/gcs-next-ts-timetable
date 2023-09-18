@@ -16,7 +16,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 
   // daisyUI config (optional - here are the default values)
   daisyui: {
