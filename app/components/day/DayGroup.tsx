@@ -1,7 +1,16 @@
 "use client"
-import { useState } from 'react';
 
-const DayGroup = () => {
+import { useState } from "react";
+
+interface DayGroupProps {
+    selectedDays: number[];
+    setSelectedDays: React.Dispatch<React.SetStateAction<number[]>>;
+    
+  }
+
+    const DayGroup: React.FC<DayGroupProps> = ({ selectedDays, setSelectedDays }) => {
+
+    
     const days = [
         { name: "MON", number: 1 },
         { name: "TUE", number: 2 },
@@ -21,9 +30,7 @@ const DayGroup = () => {
     // State to keep track of the selected dayoption
     const [selectedDayOption, setSelectedDayOption] = useState<string | null>(null);
 
-    // State to keep track of the selected days based on the selected dayoption
-    const [selectedDays, setSelectedDays] = useState<number[]>([]);
-
+    
     // Function to handle the selection of a dayoption
     const handleDayOptionSelection = (option: string) => {
         // Unselect the day option if it's already selected
@@ -39,10 +46,11 @@ const DayGroup = () => {
 
     return (
         <>
-            <div className='flex flex-col items-center'>
-                <div className="join ">
+            <div className='flex flex-col items-center space-y-1'>
+
+                <div className="join  ">
                     {daysOption.map((dayoption) => (
-                        <label key={dayoption.option} className="join-item btn">
+                        <label key={dayoption.option} className="join-item btn ">
                             <input
                                 type="radio"
                                 name="daysoption"

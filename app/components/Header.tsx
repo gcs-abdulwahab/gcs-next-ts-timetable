@@ -5,10 +5,12 @@ const Header = () => {
     const logo = "https://cdn2.vectorstock.com/i/1000x1000/96/41/timetable-rubber-stamp-vector-17549641.jpg"
     // Define an array of navigation items
     const navigationItems = [
+        { label: "Home", url: "/" },
         { label: "Departments", url: "/department" },
         { label: "Rooms", url: "/room" },
         { label: "Days", url: "/day" },
         { label: "Slots", url: "/slot" },
+        { label: "Allocation Demo", url: "/allocation" },
 
     ];
 
