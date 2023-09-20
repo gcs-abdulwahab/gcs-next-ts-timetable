@@ -1,9 +1,18 @@
 "use client"
 import { Course } from '@/app/types';
 import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
 import DynamicDropdown from './DynamicDropDown';
 
 const DummyRQ = () => {
+
+
+    const [selectedOption, setSelectedOption] = useState<number | null>(null);
+
+    // Callback function to handle the selected value change
+    const handleDropdownChange = (selectedValue: number) => {
+        setSelectedOption(selectedValue);
+    };
 
     // import BASE_URL from the env file
     const api_url = "http://gcstimetable.xyz/api/";
@@ -22,20 +31,18 @@ const DummyRQ = () => {
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>An error has occurred: {error.message} </div>;
 
-    /* value: string;
-    text: string;
-} */
-    const crs = [
-        { value: "1", text: "One" },
-        { value: "2", text: "Two" },
-        { value: "3", text: "Three" },
-        { value: "4", text: "Four" },
-] 
+const mappedCourses = data.map(course => ({
+    value: course.id,
+    text: `${course.code}  ${course.name}`
+}));
 
+console.log(mappedCourses);
+    
     return (
         <>
             <h1> Dynamic Drop Down</h1>
-            <DynamicDropdown options={crs} />  
+            <DynamicDropdown options={mappedCourses} onValueChange={handleDropdownChange} />
+            <p>Selected Value: {selectedOption !== undefined ? selectedOption : 'None'}</p>
                 
         </>
 
