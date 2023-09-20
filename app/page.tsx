@@ -1,4 +1,4 @@
-import DummyRQ from "./components/UI/DummyRQ";
+import ParentInput from "./components/UI/ParentInput";
 
 export default function Home() {
 
@@ -9,7 +9,7 @@ export default function Home() {
 
       {/* <DemoRQ /> */}
 
-      <DummyRQ   />
+      <ParentInput   />
 
       {/* <CourseInput semesterid={1} setCourseID={} /> */}
       

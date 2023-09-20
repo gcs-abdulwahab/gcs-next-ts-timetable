@@ -8,6 +8,9 @@ interface DropdownOption {
 interface DynamicDropdownProps {
     options: DropdownOption[]; // Data to populate the dropdown
     onValueChange: (selectedValue: number) => void; // Callback function to handle value change
+
+    [key: string]: any; // Allow any number of optional parameters with any key
+
 }
 
 const DynamicDropdown: React.FC<DynamicDropdownProps> = ({ options, onValueChange }) => {
@@ -21,7 +24,7 @@ const DynamicDropdown: React.FC<DynamicDropdownProps> = ({ options, onValueChang
 
     return (
         <select value={selectedValue} onChange={handleDropdownChange}>
-            <option value={undefined}>Select an option</option>
+            <option  value={undefined}>Select an option</option>
             {options.map(option => (
                 <option key={option.value} value={option.value}>
                     {option.text}
