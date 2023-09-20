@@ -13,7 +13,7 @@ const DemoRQ = () => {
   const api_url = "http://gcstimetable.xyz/api/";
 
   const { isLoading, error, data } = useQuery({
-    queryKey: ['dayData3'],
+    queryKey: ['days'],
     queryFn: async() => {
       const resp = await fetch("http://gcstimetable.xyz/api/" + "days?institutionid=2")
         .then((resp) => resp.json())
@@ -25,9 +25,9 @@ const DemoRQ = () => {
 
   });
 
-  // if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div>Loading...</div>;
 
-  // if (error) return <div>An error has occurred: </div>;
+  if (error) return <div>An error has occurred: </div>;
 
   return (
     <div>

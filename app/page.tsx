@@ -1,4 +1,4 @@
-import DemoRQ from "./components/DemoRQ";
+import CourseInput from "./components/UI/CourseInput";
 
 export default function Home() {
 
@@ -7,7 +7,11 @@ export default function Home() {
       {/* <Hero />
       <Block /> */}
 
-      <DemoRQ />
+      {/* <DemoRQ /> */}
+
+      {/* <DummyRQ /> */}
+
+      <CourseInput />
       
     </>
   );
