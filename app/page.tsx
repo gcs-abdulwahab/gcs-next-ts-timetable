@@ -1,4 +1,4 @@
-import ParentInput from "./components/UI/ParentInput";
+import DemoMultiRQ from "./components/DemoMultiRQ";
 
 export default function Home() {
 
@@ -7,9 +7,11 @@ export default function Home() {
       {/* <Hero />
       <Block /> */}
 
-      {/* <DemoRQ /> */}
+      {/* <DemoMultiRQ /> */}
 
-      <ParentInput   />
+      {/* <ParentInput   /> */}
+
+        <DemoMultiRQ />
 
       {/* <CourseInput semesterid={1} setCourseID={} /> */}
       
