@@ -1,7 +1,14 @@
+import DemoRQ from "../components/DemoRQ"
 
 const Slot = () => {
   return (
-    <div>Slot</div>
+    <div>
+
+      <h1>DemoRQ</h1>
+      <DemoRQ />
+
+
+    </div>
   )
 }
 

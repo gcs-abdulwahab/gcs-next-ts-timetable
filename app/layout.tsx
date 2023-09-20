@@ -1,11 +1,12 @@
-import { QueryClient } from '@tanstack/react-query';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
 import '@radix-ui/themes/styles.css';
+import { StrictMode } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import TanStackProvider from './components/providers/TanStackProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,23 +20,26 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-  }) {
+}) {
 
-    const queryClient = new QueryClient();
+
 
   return (
-    <html lang="en" data-theme="cupcake">
-      
-      <body className={inter.className}>
+    <StrictMode>
+      <html lang="en" data-theme="cupcake">
 
-        <Header />
-          
-        {children}
-      
-        <Footer />
+        <body className={inter.className}>
 
-      </body>
-      
-    </html>
+          <TanStackProvider>
+            <Header />
+            {children}
+            <Footer />
+
+          </TanStackProvider>
+
+        </body>
+
+      </html>
+    </StrictMode>
   )
 }

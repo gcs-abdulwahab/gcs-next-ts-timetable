@@ -1,11 +1,14 @@
-import Allocation from "../components/allocation/Allocation"
+import { StrictMode } from 'react';
+import Allocation from "../components/allocation/Allocation";
 
 const AllocationPage     = () => {
   return (
       <div>
-          
-          <Allocation sectionid={7} slotid={0} />
+      <StrictMode>
+        
+          <Allocation sectionid={1} slotid={1} />
     
+      </StrictMode>
     </div>
   )
 }
