@@ -1,4 +1,4 @@
-import DemoRQ from "../components/DemoRQ"
+import DemoRQ from "../components/DemoRQ.1"
 
 const Slot = () => {
   return (

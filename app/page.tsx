@@ -1,12 +1,14 @@
-import Block from "./components/Block";
-import Hero from "./components/Hero";
+import DemoRQ from "./components/DemoRQ";
 
 export default function Home() {
 
   return (
     <>
-      <Hero />
-      <Block />
+      {/* <Hero />
+      <Block /> */}
+
+      <DemoRQ />
+      
     </>
   );
 }
