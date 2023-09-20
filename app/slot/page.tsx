@@ -1,11 +1,11 @@
-import DemoRQ from "../components/DemoRQ.1"
+import DemoMultiRQ from "../components/DemoMultiRQ.1"
 
 const Slot = () => {
   return (
     <div>
 
-      <h1>DemoRQ</h1>
-      <DemoRQ />
+      <h1>DemoMultiRQ</h1>
+      <DemoMultiRQ />
 
 
     </div>

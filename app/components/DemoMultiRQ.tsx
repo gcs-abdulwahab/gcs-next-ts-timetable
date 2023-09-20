@@ -1,4 +1,5 @@
 'use client'
+import { BASE_URL } from "@/app/config";
 import { useQuery } from "@tanstack/react-query";
 
 export interface DayData {
@@ -8,14 +9,16 @@ export interface DayData {
   code: string;
 }
 
-const DemoRQ = () => {
+const DemoMultiRQ = () => {
 
-  const api_url = "http://gcstimetable.xyz/api/";
+  /* TODO: we have to experiment with useQueries */
+
+  
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['days'],
     queryFn: async() => {
-      const resp = await fetch("http://gcstimetable.xyz/api/" + "days?institutionid=2")
+      const resp = await fetch(`${BASE_URL}/days?institutionid=2`)
         .then((resp) => resp.json())
       
       console.log(resp)
@@ -50,4 +53,4 @@ const DemoRQ = () => {
   );
 }
 
-export default DemoRQ
+export default DemoMultiRQ
