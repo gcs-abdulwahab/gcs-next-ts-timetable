@@ -1,20 +1,20 @@
 "use client"
-import { Room } from '@/app/types';
+import { Course } from '@/app/types';
 import { useQuery } from '@tanstack/react-query';
+import DynamicDropdown from './DynamicDropDown';
 
 const DummyRQ = () => {
 
     // import BASE_URL from the env file
     const api_url = "http://gcstimetable.xyz/api/";
 
-    const { isLoading, error, data } = useQuery<Room[], Error>({
-        queryKey: ['rooms'],
+    const { isLoading, error, data } = useQuery<Course[], Error>({
+        queryKey: ['courses'],
         queryFn: async () => {
-            const resp = await fetch(api_url + "rooms?institutionid=2")
+            const resp = await fetch(api_url + "courses?semesterid=2")
                 .then((resp) => resp.json())
             console.log(resp)
-            return resp as Room[];
-
+            return resp as Course[];
         },
 
     });
@@ -22,23 +22,21 @@ const DummyRQ = () => {
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>An error has occurred: {error.message} </div>;
 
-
+    /* value: string;
+    text: string;
+} */
+    const crs = [
+        { value: "1", text: "One" },
+        { value: "2", text: "Two" },
+        { value: "3", text: "Three" },
+        { value: "4", text: "Four" },
+] 
 
     return (
         <>
-        <h1> Rooms Details </h1>
-        <ul>
-                {
-                    data?.map((item) => (
-                        <li key={item.id}>
-                            <h2>{item.name}</h2>
-                            <p>ID: {item.id}</p>
-                            <p>Number: {item.code}</p>
-                            <p>Code: {item.code}</p>
-                        </li>
-                    ))
-             }
-        </ul>
+            <h1> Dynamic Drop Down</h1>
+            <DynamicDropdown options={crs} />  
+                
         </>
 
     )
