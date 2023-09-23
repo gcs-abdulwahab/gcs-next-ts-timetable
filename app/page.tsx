@@ -1,9 +1,13 @@
+
 import DemoMultiRQ from "./components/DemoMultiRQ";
+
+
 
 export default function Home() {
 
   return (
     <>
+
       {/* <Hero />
       <Block /> */}
 
@@ -15,6 +19,7 @@ export default function Home() {
 
       {/* <CourseInput semesterid={1} setCourseID={} /> */}
       
+
     </>
   );
 }
