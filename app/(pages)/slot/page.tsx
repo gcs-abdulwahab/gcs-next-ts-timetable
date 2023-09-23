@@ -1,4 +1,5 @@
-import DemoMultiRQ from "../components/DemoMultiRQ"
+import DemoMultiRQ from '../../components/DemoMultiRQ';
+
 
 
 const Slot = () => {
