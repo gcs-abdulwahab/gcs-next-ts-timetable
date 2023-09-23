@@ -1,20 +1,18 @@
-import React from 'react';
-
 interface Slot {
   id: number;
   name: string;
 }
-interface Session {
+interface Allocation {
   id: number;
   name: string;
 }
 
-interface SessionTableProps {
+interface AllocationTableProps {
   slots: Slot[];
-  sessions: Session[];
+  allocations: Allocation[];
 }
 
-const SessionTable = () => {
+const AllocationTable = () => {
   const slots = [
     { id: 1, name: '8:00-9:00' },
     { id: 2, name: '9:00-10:00' },
@@ -24,7 +22,7 @@ const SessionTable = () => {
     { id: 6, name: '1:00-2:00' },
     { id: 7, name: '2:00-3:00' },
   ];
-  const sessions = [
+  const allocations = [
     { id: 1, name: 'Monday' },
     { id: 2, name: 'Tuesday' },
     { id: 3, name: 'Wednesday' },
@@ -32,6 +30,19 @@ const SessionTable = () => {
     { id: 5, name: 'Friday' },
     { id: 6, name: 'Saturday' },
   ];
+
+  const semesters = [
+    { id: 1, name: '2nd Semester', isMorning:'Morning' },
+    { id: 2, name: '4th Semester', isMorning:'Morning' },
+    { id: 3, name: '6th Semester', isMorning:'Morning' },
+    { id: 4, name: '8th Semester', isMorning:'Morning' },
+    { id: 5, name: '2nd Semester', isMorning:'Evening' },
+    { id: 6, name: '4th Semester', isMorning:'Evening' },
+    { id: 7, name: '6th Semester', isMorning:'Evening' },
+    { id: 8, name: '8th Semester', isMorning:'Evening' },
+    
+  ];
+  
   return (
     <table className="min-w-full border-collapse">
       <thead>
@@ -45,7 +56,7 @@ const SessionTable = () => {
         </tr>
       </thead>
       <tbody>
-        {sessions.map((session, rowIndex) => (
+        {allocations.map((session, rowIndex) => (
           <tr key={rowIndex}>
             <td className="border border-gray-400 px-4 py-2 font-bold">
               {session.name}
@@ -65,4 +76,4 @@ const SessionTable = () => {
   );
 };
 
-export default SessionTable;
+export default AllocationTable;
