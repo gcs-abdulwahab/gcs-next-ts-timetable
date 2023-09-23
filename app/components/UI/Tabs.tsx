@@ -14,7 +14,10 @@ function Tabs() {
 			console.log(response);
 			return response as Semester[];
 		},
-	});
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  
 
 	return (
 		<Tab.Group>

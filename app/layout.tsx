@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
 	return (
 		<StrictMode>
-			<html lang="en" data-theme="cupcake">
+			<html lang="en" data-theme="dark">
 						<TanStackProvider>
 				<body className={inter.className}>
 					<div className="container mx-auto">
