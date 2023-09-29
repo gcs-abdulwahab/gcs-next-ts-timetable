@@ -1,5 +1,5 @@
 
-import DemoMultiRQ from "./components/DemoMultiRQ";
+import DemoAPI from "./components/DemoAPI";
 
 
 
@@ -8,14 +8,19 @@ export default function Home() {
   return (
     <>
 
+    <DemoAPI />
+
+
       {/* <Hero />
       <Block /> */}
+
+
 
       {/* <DemoMultiRQ /> */}
 
       {/* <ParentInput   /> */}
 
-        <DemoMultiRQ />
+        {/* <DemoMultiRQ /> */}
 
       {/* <CourseInput semesterid={1} setCourseID={} /> */}
       
