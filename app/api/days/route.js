@@ -1,30 +1,65 @@
-/* {
-        "id": 7,
-        "number": 1,
-        "name": "Monday",
-        "code": "MON",
-        "institution_id": 2,
-        "created_at": "2023-09-19T12:12:26.000000Z",
-        "updated_at": "2023-09-19T12:12:26.000000Z"
-    } */
+const days = 
+	[
+		{
+			"id": 1,
+			"number": 1,
+			"name": "Monday",
+			"code": "MON",
+			"institution_id": 1,
+			"created_at": "2023-09-24 18:25:21",
+			"updated_at": "2023-09-24 18:25:21"
+		},
+		{
+			"id": 2,
+			"number": 2,
+			"name": "Tuesday",
+			"code": "TUE",
+			"institution_id": 1,
+			"created_at": "2023-09-24 18:25:21",
+			"updated_at": "2023-09-24 18:25:21"
+		},
+		{
+			"id": 3,
+			"number": 3,
+			"name": "Wednesday",
+			"code": "WED",
+			"institution_id": 1,
+			"created_at": "2023-09-24 18:25:21",
+			"updated_at": "2023-09-24 18:25:21"
+		},
+		{
+			"id": 4,
+			"number": 4,
+			"name": "Thursday",
+			"code": "THU",
+			"institution_id": 1,
+			"created_at": "2023-09-24 18:25:21",
+			"updated_at": "2023-09-24 18:25:21"
+		},
+		{
+			"id": 5,
+			"number": 5,
+			"name": "Friday",
+			"code": "FRI",
+			"institution_id": 1,
+			"created_at": "2023-09-24 18:25:21",
+			"updated_at": "2023-09-24 18:25:21"
+		},
+		{
+			"id": 6,
+			"number": 6,
+			"name": "Saturday",
+			"code": "SAT",
+			"institution_id": 1,
+			"created_at": "2023-09-24 18:25:21",
+			"updated_at": "2023-09-24 18:25:21"
+		}
+	]
 
-const days = [
-    {
-        "id": 7,
-        "number": 1,
-        "name": "Monday",
-        "code": "MON",
-        "institution_id": 2,
-        "created_at": "2023-09-19T12:12:26.000000Z",
-        "updated_at": "2023-09-19T12:12:26.000000Z"
-    },
-     {
-        "id": 8,
-        "number": 2,
-        "name": "Tuesday",
-        "code": "TUE",
-        "institution_id": 2,
-        "created_at": "2023-09-19T12:12:26.000000Z",
-        "updated_at": "2023-09-19T12:12:26.000000Z"
-    }
-]
+export async function GET() {
+    return new Response(JSON.stringify(days), {
+      headers: {
+        "content-type": "application/json;charset=UTF-8",
+      },
+    });
+  }
