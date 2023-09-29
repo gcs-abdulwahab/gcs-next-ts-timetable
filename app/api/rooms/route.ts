@@ -1,3 +1,4 @@
+import { NextApiRequest, NextApiResponse } from "next";
 
 
 const rooms = 	[
@@ -2204,10 +2205,14 @@ const rooms = 	[
 	]
 
 
-export async function GET() {
-    return new Response(JSON.stringify(rooms), {
+export async function GET(request:NextApiRequest , response:NextApiResponse) {
+
+
+	return new Response(JSON.stringify(rooms), {
       headers: {
         "content-type": "application/json;charset=UTF-8",
       },
-    });
+	}
+
+	);
   }
