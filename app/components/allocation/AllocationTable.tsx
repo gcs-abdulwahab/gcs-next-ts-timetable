@@ -1,8 +1,17 @@
 import React from "react";
+import SemesterComponent from "../SemesterComponent";
+import Shift from "../Shift";
+
 interface Slot {
 	id: number;
 	name: string;
 }
+
+interface Semester {
+	id: number;
+	name: string;
+}
+
 interface Section {
 	id: number;
 	name: string;
@@ -11,66 +20,26 @@ interface Section {
 interface AllocationTableProps {
 	slots: Slot[];
 	sections: Section[];
+	semesters: Semester[];
 }
 
-const AllocationTable = ({ slots, sections }: AllocationTableProps) => {
-	const semesters = [
-		{ id: 1, name: "2nd Semester", isMorning: "Morning" },
-		{ id: 2, name: "4th Semester", isMorning: "Morning" },
-		{ id: 3, name: "6th Semester", isMorning: "Morning" },
-		{ id: 4, name: "8th Semester", isMorning: "Morning" },
-		{ id: 5, name: "2nd Semester", isMorning: "Evening" },
-		{ id: 6, name: "4th Semester", isMorning: "Evening" },
-		{ id: 7, name: "6th Semester", isMorning: "Evening" },
-		{ id: 8, name: "8th Semester", isMorning: "Evening" },
-	];
+const AllocationTable = ({ slots, sections, semesters }: AllocationTableProps) => {
 
+	const shifts = [
+		{ id: 1, name: "BS Morning" },
+		{ id: 2, name: "Inter Morning" },
+		{ id: 3, name: "BS Evening" },
+		{ id: 4, name: "Inter Evening" },
+		{ id: 5, name: "ADP Morning" },
+	];
 	return (
 		<React.Fragment>
 			<div className="bg-red-400 p-4">
-				<ul className="flex ">
-					<li className="bg-red-400 mx-2 p-3">
-						{" "}
-						<button className="btn btn-primary ">BS Morning </button>{" "}
-					</li>
-					<li className="bg-red-400 mx-2 p-3">
-						{" "}
-						<button className="btn btn-accent">Inter Morning</button>{" "}
-					</li>
-					<li className="bg-red-400 mx-2 p-3">
-						{" "}
-						<button className="btn btn-accent">BS Evening </button>{" "}
-					</li>
-					<li className="bg-red-400 mx-2 p-3">
-						{" "}
-						<button className="btn btn-accent">Inter Evening</button>{" "}
-					</li>
-					<li className="bg-red-400 mx-2 p-3">
-						{" "}
-						<button className="btn btn-accent">ADP Morning </button>{" "}
-					</li>
-				</ul>
+				<Shift shifts={shifts} />
 			</div>
 
 			<div className="bg-yellow-400 p-4">
-				<ul className="flex ">
-					<li className=" mx-2 p-3">
-						{" "}
-						<button className="btn btn-primary">1st</button>{" "}
-					</li>
-					<li className=" mx-2 p-3">
-						{" "}
-						<button className="btn btn-accent">3rd</button>{" "}
-					</li>
-					<li className=" mx-2 p-3">
-						{" "}
-						<button className="btn btn-accent">5th</button>{" "}
-					</li>
-					<li className=" mx-2 p-3">
-						{" "}
-						<button className="btn btn-accent">7th</button>{" "}
-					</li>
-				</ul>
+				<SemesterComponent semesters={semesters} />
 			</div>
 			<table className="min-w-full border-collapse">
 				<thead>

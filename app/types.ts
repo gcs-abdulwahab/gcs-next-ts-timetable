@@ -23,9 +23,6 @@ export type Teacher = {
 export type Semester={
     id: number;
     name: string;
-    number: number;
-    is_active: number;
-    program_id: number;
-
+      
 }
 
