@@ -16,12 +16,14 @@ interface AllocationTableProps {
 const AllocationTable = () => {
   const slots = [
     { id: 1, name: '8:00-9:00' },
+    { id: 1, name: '8:30-9:30' },
     { id: 2, name: '9:00-10:00' },
     { id: 3, name: '10:00-11:00' },
     { id: 4, name: '11:00-12:00' },
     { id: 5, name: '12:00-1:00' },
     { id: 6, name: '1:00-2:00' },
     { id: 7, name: '2:00-3:00' },
+    { id: 8, name: '2:10-2:50' },
   ];
   const sections = [
     { id: 12, name: 'Inter   First Year   ICS Physics   Section G ' },
