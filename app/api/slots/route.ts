@@ -183,10 +183,13 @@ const slots = [
 		}
 	]
 
-export async function GET(request:NextApiRequest , response : NextApiResponse ) {
-    return new Response(JSON.stringify(slots), {
+export async function GET() {
+
+	
+	return new Response(JSON.stringify(slots), {
       headers: {
         "content-type": "application/json;charset=UTF-8",
       },
     });
-  }
+}
+

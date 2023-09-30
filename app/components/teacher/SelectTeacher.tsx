@@ -1,4 +1,4 @@
-import React from 'react';
+'use client'
 
 const SelectTeacher = () => {
     const openModal = () => {
@@ -14,7 +14,7 @@ const SelectTeacher = () => {
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box">
                     <h3 className="font-bold text-lg">Teacher List</h3>
-                    <table>
+                    <table className="table table-zebra">
                         <thead>
                             <tr>
                                 <th>ID</th>

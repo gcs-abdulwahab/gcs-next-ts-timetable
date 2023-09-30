@@ -1,3 +1,4 @@
+import { NextResponse } from 'next/server';
 const days = 
 	[
 		{
@@ -57,9 +58,14 @@ const days =
 	]
 
 export async function GET() {
-    return new Response(JSON.stringify(days), {
+
+	/* return new Response(JSON.stringify(days), {
       headers: {
         "content-type": "application/json;charset=UTF-8",
       },
-    });
+	});
+	*/
+
+	return NextResponse.json(days,{status:201});
+	
   }

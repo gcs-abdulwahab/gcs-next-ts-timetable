@@ -1,4 +1,5 @@
 "use client"
+import { HiPencilAlt } from "react-icons/hi"
 const DemoAPI = () => {
 
     const handleClick = async () => { 
@@ -9,10 +10,10 @@ const DemoAPI = () => {
 
   return (
       <div>
-          DEMO 
+          DEMO Check Console Log 
 
         <button onClick={handleClick} > Fetch slots</button>
-
+        <HiPencilAlt />
         
     </div>
   )
