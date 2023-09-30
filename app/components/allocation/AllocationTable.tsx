@@ -88,7 +88,7 @@ const AllocationTable = () => {
                 key={colIndex}
                 className="border border-gray-400 px-4 py-2"
               >
-                Data for {session.name} in {slot.name}
+                {/* Data for {session.name} in {slot.name} */}
               </td>
             ))}
           </tr>
