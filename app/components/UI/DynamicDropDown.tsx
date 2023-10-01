@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 interface DropdownOption {
-    value: number;
     text: string;
+    value: number;
 }
 
 interface DynamicDropdownProps {
@@ -13,7 +13,7 @@ interface DynamicDropdownProps {
 
 }
 
-const DynamicDropdown: React.FC<DynamicDropdownProps> = ({ options, onValueChange }) => {
+const DynamicDropdown = ({ options, onValueChange }:DynamicDropdownProps) => {
     const [selectedValue, setSelectedValue] = useState<number | undefined>(undefined);
 
     const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

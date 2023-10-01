@@ -7,7 +7,7 @@ interface DayGroupProps {
     
   }
 
-    const DayGroup: React.FC<DayGroupProps> = ({ selectedDays, setSelectedDays }) => {
+    const DayGroup  = ({ selectedDays, setSelectedDays } :DayGroupProps   ) => {
 
     
     const days = [

@@ -19,3 +19,10 @@ export type Teacher = {
     name: string;
     
 }
+
+export type Semester={
+    id: number;
+    name: string;
+      
+}
+

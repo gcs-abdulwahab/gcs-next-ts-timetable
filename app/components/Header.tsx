@@ -11,6 +11,7 @@ const Header = () => {
         { label: "Days", url: "/day" },
         { label: "Slots", url: "/slot" },
         { label: "Allocation Demo", url: "/allocation" },
+        { label: "Tabs Demo", url: "/tabs" },
 
     ];
 
