@@ -66,6 +66,6 @@ export async function GET() {
 	});
 	*/
 
-	return NextResponse.json(days,{status:201});
+	return NextResponse.json(days,{status:200});
 	
   }
