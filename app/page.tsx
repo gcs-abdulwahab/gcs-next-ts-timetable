@@ -1,19 +1,13 @@
-import DemoAPI from './components/DemoAPI';
-import SelectTeacher from './components/teacher/SelectTeacher';
-
-
-
-
 export default function Home() {
+	return (
+		<>
+			
 
-  return (
-    <>
+			{/* <SelectTeacher />
 
-    <SelectTeacher />
+      <DemoAPI /> */}
 
-      <DemoAPI />
-
-      {/* <div className="bg-slate-200 border-slate-800 border-s-zinc-200
+			{/* <div className="bg-slate-200 border-slate-800 border-s-zinc-200
        flex justify-between px-14
        
        h-52
@@ -32,21 +26,16 @@ export default function Home() {
       </div>
      */}
 
-
-      {/* <Hero />
+			{/* <Hero />
       <Block /> */}
 
+			{/* <DemoMultiRQ /> */}
 
+			{/* <ParentInput   /> */}
 
-      {/* <DemoMultiRQ /> */}
+			{/* <DemoMultiRQ /> */}
 
-      {/* <ParentInput   /> */}
-
-        {/* <DemoMultiRQ /> */}
-
-      {/* <CourseInput semesterid={1} setCourseID={} /> */}
-      
-
-    </>
-  );
+			{/* <CourseInput semesterid={1} setCourseID={} /> */}
+		</>
+	);
 }
